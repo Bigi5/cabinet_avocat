@@ -1,0 +1,156 @@
+﻿
+  GET|HEAD        / ..................................................... home
+  GET|HEAD        confirm-password password.confirm ÔÇ║ Auth\ConfirmablePassworÔÇª
+  POST            confirm-password .. Auth\ConfirmablePasswordController@store
+  GET|HEAD        contact ............................................ contact
+  GET|HEAD        crm/actes . crm.actes.index ÔÇ║ Crm\Auth\ActesController@index
+  POST            crm/actes . crm.actes.store ÔÇ║ Crm\Auth\ActesController@store
+  GET|HEAD        crm/actes/create crm.actes.create ÔÇ║ Crm\Auth\ActesControlleÔÇª
+  POST            crm/actes/export/dossier/{dossierId} crm.actes.export.dossiÔÇª
+  GET|HEAD        crm/actes/{id} crm.actes.show ÔÇ║ Crm\Auth\ActesController@shÔÇª
+  PUT             crm/actes/{id} crm.actes.update ÔÇ║ Crm\Auth\ActesController@ÔÇª
+  DELETE          crm/actes/{id} crm.actes.destroy ÔÇ║ Crm\Auth\ActesControllerÔÇª
+  GET|HEAD        crm/actes/{id}/edit crm.actes.edit ÔÇ║ Crm\Auth\ActesControllÔÇª
+  GET|HEAD        crm/archives crm.archives.index ÔÇ║ Crm\ArchivesController@inÔÇª
+  GET|HEAD        crm/archives/categories crm.archives.categories ÔÇ║ Crm\ArchiÔÇª
+  DELETE          crm/archives/documents/{document} crm.archives.documents.deÔÇª
+  GET|HEAD        crm/archives/documents/{document}/telecharger crm.archives.ÔÇª
+  GET|HEAD        crm/archives/emplacements crm.archives.emplacements ÔÇ║ Crm\AÔÇª
+  POST            crm/archives/emplacements crm.archives.emplacements.store  ÔÇª
+  POST            crm/archives/physique crm.archives.physique.store ÔÇ║ Crm\ArcÔÇª
+  GET|HEAD        crm/archives/recherche crm.archives.recherche ÔÇ║ Crm\ArchiveÔÇª
+  GET|HEAD        crm/archives/{id} crm.archives.show ÔÇ║ Crm\ArchivesControlleÔÇª
+  POST            crm/archives/{id}/confirmer-restauration crm.archives.confiÔÇª
+  POST            crm/archives/{id}/documents crm.archives.documents.store ÔÇ║ ÔÇª
+  POST            crm/archives/{id}/restaurer crm.archives.restaurer ÔÇ║ Crm\ArÔÇª
+  GET|HEAD        crm/archives/{id}/telecharger-zip crm.archives.telecharger-ÔÇª
+  GET|HEAD        crm/baux ......... crm.baux.index ÔÇ║ Crm\BauxController@index
+  POST            crm/baux ......... crm.baux.store ÔÇ║ Crm\BauxController@store
+  GET|HEAD        crm/baux/create crm.baux.create ÔÇ║ Crm\BauxController@create
+  GET|HEAD        crm/baux/{baux} .... crm.baux.show ÔÇ║ Crm\BauxController@show
+  PUT|PATCH       crm/baux/{baux} crm.baux.update ÔÇ║ Crm\BauxController@update
+  DELETE          crm/baux/{baux} crm.baux.destroy ÔÇ║ Crm\BauxController@destrÔÇª
+  GET|HEAD        crm/baux/{baux}/edit crm.baux.edit ÔÇ║ Crm\BauxController@edit
+  POST            crm/baux/{id}/generate-echeances crm.baux.generate-echeanceÔÇª
+  POST            crm/baux/{id}/paiements crm.baux.paiements.store ÔÇ║ Crm\PaieÔÇª
+  GET|HEAD        crm/baux/{id}/pdf .... crm.baux.pdf ÔÇ║ Crm\BauxController@pdf
+  GET|HEAD        crm/clients crm.clients.index ÔÇ║ Crm\Auth\ClientsController@ÔÇª
+  POST            crm/clients crm.clients.store ÔÇ║ Crm\Auth\ClientsController@ÔÇª
+  GET|HEAD        crm/clients/create crm.clients.create ÔÇ║ Crm\Auth\ClientsConÔÇª
+  POST            crm/clients/export crm.clients.export ÔÇ║ Crm\Auth\ClientsConÔÇª
+  POST            crm/clients/import crm.clients.import ÔÇ║ Crm\Auth\ClientsConÔÇª
+  GET|HEAD        crm/clients/{id} crm.clients.show ÔÇ║ Crm\Auth\ClientsControlÔÇª
+  PUT             crm/clients/{id} crm.clients.update ÔÇ║ Crm\Auth\ClientsContrÔÇª
+  DELETE          crm/clients/{id} crm.clients.destroy ÔÇ║ Crm\Auth\ClientsContÔÇª
+  GET|HEAD        crm/clients/{id}/edit crm.clients.edit ÔÇ║ Crm\Auth\ClientsCoÔÇª
+  GET|HEAD        crm/dashboard crm.dashboard ÔÇ║ Crm\Auth\DashboardController@ÔÇª
+  GET|HEAD        crm/documents crm.documents.index ÔÇ║ Crm\Auth\DocumentsContrÔÇª
+  POST            crm/documents crm.documents.store ÔÇ║ Crm\Auth\DocumentsContrÔÇª
+  GET|HEAD        crm/documents/create crm.documents.create ÔÇ║ Crm\Auth\DocumeÔÇª
+  GET|HEAD        crm/documents/{id} crm.documents.show ÔÇ║ Crm\Auth\DocumentsCÔÇª
+  PUT             crm/documents/{id} crm.documents.update ÔÇ║ Crm\Auth\DocumentÔÇª
+  DELETE          crm/documents/{id} crm.documents.destroy ÔÇ║ Crm\Auth\DocumenÔÇª
+  POST            crm/documents/{id}/archiver crm.documents.archiver ÔÇ║ Crm\ArÔÇª
+  GET|HEAD        crm/documents/{id}/download crm.documents.download ÔÇ║ Crm\AuÔÇª
+  GET|HEAD        crm/documents/{id}/edit crm.documents.edit ÔÇ║ Crm\Auth\DocumÔÇª
+  POST            crm/documents/{id}/version crm.documents.version ÔÇ║ Crm\AuthÔÇª
+  GET|HEAD        crm/dossiers crm.dossiers.index ÔÇ║ Crm\Auth\DossiersControllÔÇª
+  POST            crm/dossiers crm.dossiers.store ÔÇ║ Crm\Auth\DossiersControllÔÇª
+  GET|HEAD        crm/dossiers/create crm.dossiers.create ÔÇ║ Crm\Auth\DossiersÔÇª
+  GET|HEAD        crm/dossiers/{id} crm.dossiers.show ÔÇ║ Crm\Auth\DossiersContÔÇª
+  PUT             crm/dossiers/{id} crm.dossiers.update ÔÇ║ Crm\Auth\DossiersCoÔÇª
+  DELETE          crm/dossiers/{id} crm.dossiers.destroy ÔÇ║ Crm\Auth\DossiersCÔÇª
+  POST            crm/dossiers/{id}/archiver crm.dossiers.archiver ÔÇ║ Crm\ArchÔÇª
+  POST            crm/dossiers/{id}/collaborateurs crm.dossiers.collaborateurÔÇª
+  DELETE          crm/dossiers/{id}/collaborateurs/{userId} crm.dossiers.collÔÇª
+  GET|HEAD        crm/dossiers/{id}/edit crm.dossiers.edit ÔÇ║ Crm\Auth\DossierÔÇª
+  POST            crm/dossiers/{id}/statut crm.dossiers.statut ÔÇ║ Crm\Auth\DosÔÇª
+  GET|HEAD        crm/echeances crm.echeances.index ÔÇ║ Crm\Auth\EcheancesContrÔÇª
+  POST            crm/echeances crm.echeances.store ÔÇ║ Crm\Auth\EcheancesContrÔÇª
+  GET|HEAD        crm/echeances/create crm.echeances.create ÔÇ║ Crm\Auth\EcheanÔÇª
+  GET|HEAD        crm/echeances/{id} crm.echeances.show ÔÇ║ Crm\Auth\EcheancesCÔÇª
+  PUT             crm/echeances/{id} crm.echeances.update ÔÇ║ Crm\Auth\EcheanceÔÇª
+  DELETE          crm/echeances/{id} crm.echeances.destroy ÔÇ║ Crm\Auth\EcheancÔÇª
+  POST            crm/echeances/{id}/done crm.echeances.done ÔÇ║ Crm\Auth\EcheaÔÇª
+  GET|HEAD        crm/echeances/{id}/edit crm.echeances.edit ÔÇ║ Crm\Auth\EcheaÔÇª
+  POST            crm/echeances/{id}/reminder crm.echeances.reminder ÔÇ║ Crm\AuÔÇª
+  POST            crm/echeances/{id}/report crm.echeances.report ÔÇ║ Crm\Auth\EÔÇª
+  POST            crm/echeances/{id}/statut crm.echeances.statut ÔÇ║ Crm\Auth\EÔÇª
+  GET|HEAD        crm/factures crm.factures.index ÔÇ║ Crm\FacturesController@inÔÇª
+  POST            crm/factures crm.factures.store ÔÇ║ Crm\FacturesController@stÔÇª
+  GET|HEAD        crm/factures/create crm.factures.create ÔÇ║ Crm\FacturesContrÔÇª
+  GET|HEAD        crm/factures/{facture} crm.factures.show ÔÇ║ Crm\FacturesContÔÇª
+  PUT             crm/factures/{facture} crm.factures.update ÔÇ║ Crm\FacturesCoÔÇª
+  DELETE          crm/factures/{facture} crm.factures.destroy ÔÇ║ Crm\FacturesCÔÇª
+  GET|HEAD        crm/factures/{facture}/edit crm.factures.edit ÔÇ║ Crm\FactureÔÇª
+  POST            crm/factures/{facture}/email crm.factures.email ÔÇ║ Crm\FactuÔÇª
+  POST            crm/factures/{facture}/mark-as-paid crm.factures.mark-as-paÔÇª
+  POST            crm/factures/{facture}/paiements crm.factures.paiements.stoÔÇª
+  GET|HEAD        crm/factures/{facture}/pdf crm.factures.pdf ÔÇ║ Crm\FacturesCÔÇª
+  POST            crm/factures/{facture}/validate crm.factures.validate ÔÇ║ CrmÔÇª
+  GET|HEAD        crm/logs .... crm.logs.index ÔÇ║ Crm\Auth\LogsController@index
+  GET|HEAD        crm/logs/{id} . crm.logs.show ÔÇ║ Crm\Auth\LogsController@show
+  POST            crm/notifications/read-all crm.notifications.readAll ÔÇ║ NotiÔÇª
+  POST            crm/notifications/{notification}/read crm.notifications.reaÔÇª
+  GET|HEAD        crm/profile .................................... crm.profile
+  GET|HEAD        crm/quittances/{id}/pdf crm.quittances.pdf ÔÇ║ Crm\QuittanceCÔÇª
+  GET|HEAD        crm/search crm.search ÔÇ║ Crm\Auth\DashboardController@search
+  GET|HEAD        crm/settings .................................. crm.settings
+  GET|HEAD        crm/statistiques .......................... crm.statistiques
+  GET|HEAD        crm/test-middleware ........................................ 
+  GET|HEAD        crm/transmissions crm.transmissions.index ÔÇ║ Crm\TransmissioÔÇª
+  POST            crm/transmissions crm.transmissions.store ÔÇ║ Crm\TransmissioÔÇª
+  GET|HEAD        crm/transmissions/create crm.transmissions.create ÔÇ║ Crm\TraÔÇª
+  GET|HEAD        crm/transmissions/{id}/files/{type} crm.transmissions.filesÔÇª
+  POST            crm/transmissions/{id}/generate-decharge crm.transmissions.ÔÇª
+  GET|HEAD        crm/transmissions/{id}/pdf crm.transmissions.pdf ÔÇ║ Crm\TranÔÇª
+  POST            crm/transmissions/{id}/sign crm.transmissions.sign ÔÇ║ Crm\TrÔÇª
+  GET|HEAD        crm/transmissions/{transmission} crm.transmissions.show ÔÇ║ CÔÇª
+  PUT|PATCH       crm/transmissions/{transmission} crm.transmissions.update  ÔÇª
+  DELETE          crm/transmissions/{transmission} crm.transmissions.destroy ÔÇª
+  GET|HEAD        crm/transmissions/{transmission}/edit crm.transmissions.ediÔÇª
+  GET|HEAD        crm/utilisateurs crm.utilisateurs.index ÔÇ║ Crm\Auth\UtilisatÔÇª
+  POST            crm/utilisateurs crm.utilisateurs.store ÔÇ║ Crm\Auth\UtilisatÔÇª
+  GET|HEAD        crm/utilisateurs/create crm.utilisateurs.create ÔÇ║ Crm\Auth\ÔÇª
+  GET|HEAD        crm/utilisateurs/{id} crm.utilisateurs.show ÔÇ║ Crm\Auth\UtilÔÇª
+  PUT             crm/utilisateurs/{id} crm.utilisateurs.update ÔÇ║ Crm\Auth\UtÔÇª
+  DELETE          crm/utilisateurs/{id} crm.utilisateurs.destroy ÔÇ║ Crm\Auth\UÔÇª
+  POST            crm/utilisateurs/{id}/activate crm.utilisateurs.activate ÔÇ║ ÔÇª
+  POST            crm/utilisateurs/{id}/deactivate crm.utilisateurs.deactivatÔÇª
+  GET|HEAD        crm/utilisateurs/{id}/edit crm.utilisateurs.edit ÔÇ║ Crm\AuthÔÇª
+  POST            crm/utilisateurs/{id}/reset-password crm.utilisateurs.resetÔÇª
+  GET|HEAD        dashboard ........................................ dashboard
+  POST            email/verification-notification verification.send ÔÇ║ Auth\EmÔÇª
+  GET|HEAD        forgot-password password.request ÔÇ║ Auth\PasswordResetLinkCoÔÇª
+  POST            forgot-password password.email ÔÇ║ Auth\PasswordResetLinkContÔÇª
+  GET|HEAD        le-cabinet ........................................... about
+  GET|HEAD        login ................................................ login
+  POST            login ..... login.submit ÔÇ║ Auth\CabinetLoginController@login
+  POST            logout .............................................. logout
+  PUT             password .. password.update ÔÇ║ Auth\PasswordController@update
+  GET|HEAD        profile .............. profile.edit ÔÇ║ ProfileController@show
+  PATCH           profile .......... profile.update ÔÇ║ ProfileController@update
+  DELETE          profile ........ profile.destroy ÔÇ║ ProfileController@destroy
+  POST            profile/avatar profile.avatar.store ÔÇ║ ProfileController@stoÔÇª
+  DELETE          profile/avatar profile.avatar.destroy ÔÇ║ ProfileController@dÔÇª
+  GET|HEAD        profile/avatar profile.avatar.show ÔÇ║ ProfileController@showÔÇª
+  GET|HEAD        register ... register ÔÇ║ Auth\RegisteredUserController@create
+  POST            register ............... Auth\RegisteredUserController@store
+  POST            reset-password password.store ÔÇ║ Auth\NewPasswordController@ÔÇª
+  GET|HEAD        reset-password/{token} password.reset ÔÇ║ Auth\NewPasswordConÔÇª
+  GET|HEAD        sanctum/csrf-cookie sanctum.csrf-cookie ÔÇ║ Laravel\Sanctum  ÔÇª
+  GET|HEAD        services .......................................... services
+  GET|HEAD        services/Specialises .................. services.Specialises
+  GET|HEAD        services/detail ............................ services.detail
+  GET|HEAD        services/entreprises .................. services.entreprises
+  GET|HEAD        services/particuliers ................ services.particuliers
+  GET|HEAD        services/professionnels ............ services.professionnels
+  GET|HEAD        settings ................ settings ÔÇ║ SettingsController@show
+  PUT             settings ....... settings.update ÔÇ║ SettingsController@update
+  GET|HEAD        up ......................................................... 
+  GET|HEAD        verify-email verification.notice ÔÇ║ Auth\EmailVerificationPrÔÇª
+  GET|HEAD        verify-email/{id}/{hash} verification.verify ÔÇ║ Auth\VerifyEÔÇª
+
+                                                          Showing [151] routes
+
+
